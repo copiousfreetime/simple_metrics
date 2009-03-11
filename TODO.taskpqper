@@ -6,6 +6,8 @@ Write the FFI version:
     - @duration( 00:25 )
 
 Write the regular extension version: 
+    - @start( 15:15 )
+    - @stop( 16:25 )
 
 Compare method call overhead:
 
