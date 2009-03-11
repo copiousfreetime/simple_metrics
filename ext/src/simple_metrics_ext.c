@@ -147,7 +147,7 @@ void Init_simple_metrics_ext()
     mSME = rb_define_module_under( mSM, "Ext" );
 
     /* load the class we inherit from */
-    rb_require("simplemetrics/metric");
+    rb_require("simplemetrics/common");
 
     cSM_Common = rb_const_get( mSM, rb_intern( "Common" ) );
 

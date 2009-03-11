@@ -50,8 +50,8 @@ describe SimpleMetrics::Ext::Metric  do
   describe "#to_hash " do
     it "converts to a Hash" do
       h = @full_metric.to_hash
-      h.size.should == ::SimpleMetrics::Metric.keys.size
-      h.keys.sort.should == ::SimpleMetrics::Metric.keys
+      h.size.should == ::SimpleMetrics::Common.keys.size
+      h.keys.sort.should == ::SimpleMetrics::Common.keys
     end
 
     it "converts to a limited Hash if given arguments" do

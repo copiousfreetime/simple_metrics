@@ -2,7 +2,7 @@
 #
 require 'rbconfig'
 require 'ffi'
-require 'simplemetrics/metric'
+require 'simplemetrics/common'
 
 module SimpleMetrics
   module FFI
