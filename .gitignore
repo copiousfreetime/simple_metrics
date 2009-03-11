@@ -1,1 +1,5 @@
 *~
+*.o
+*.bundle
+ext/demo
+ext/Makefile
