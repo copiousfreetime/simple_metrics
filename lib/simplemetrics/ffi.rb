@@ -32,7 +32,7 @@ module SimpleMetrics
     attach_function :simple_metrics_stddev,[ :pointer ], :double
     attach_function :simple_metrics_rate,  [ :pointer ], :double
 
-    class Metric < ::SimpleMetrics::Metric
+    class Metric < ::SimpleMetrics::Common
       include ::SimpleMetrics::FFI
       def initialize( name )
         super
@@ -43,7 +43,7 @@ module SimpleMetrics
         simple_metrics_update( @impl, v )
       end
 
-      ::SimpleMetrics::Metric.keys.each do |f|
+      self.keys.each do |f|
         module_eval <<-code
         def #{f}
           simple_metrics_#{f}( @impl )

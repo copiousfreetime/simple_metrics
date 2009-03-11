@@ -141,7 +141,7 @@ VALUE sm_stddev( VALUE self )
 
 void Init_simple_metrics_ext()
 {
-    VALUE cSM_Metric;
+    VALUE cSM_Common;
 
     mSM  = rb_define_module( "SimpleMetrics" );
     mSME = rb_define_module_under( mSM, "Ext" );
@@ -149,9 +149,9 @@ void Init_simple_metrics_ext()
     /* load the class we inherit from */
     rb_require("simplemetrics/metric");
 
-    cSM_Metric = rb_const_get( mSM, rb_intern( "Metric" ) );
+    cSM_Common = rb_const_get( mSM, rb_intern( "Common" ) );
 
-    cSME_Metric = rb_define_class_under( mSME, "Metric", cSM_Metric );
+    cSME_Metric = rb_define_class_under( mSME, "Metric", cSM_Common );
 
     rb_define_alloc_func(cSME_Metric, sm_alloc); 
     rb_define_method( cSME_Metric, "initialize", sm_initialize, 1 );
