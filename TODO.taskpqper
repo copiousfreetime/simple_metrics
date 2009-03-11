@@ -1,3 +1,10 @@
 Simple Metrics C:
     - @start( 22:30 ) @stop( 24:30 )
 
+Write the FFI version:
+
+Write the regular extension version: 
+
+Compare method call overhead:
+
+Do the FFI version of the jlog:
