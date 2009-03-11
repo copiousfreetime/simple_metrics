@@ -3,3 +3,4 @@
 *.bundle
 ext/demo
 ext/Makefile
+coverage/

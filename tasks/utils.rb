@@ -1,4 +1,4 @@
-require 'simple_metrics/version'
+require 'simplemetrics/version'
 
 #-------------------------------------------------------------------------------
 # Additions to the Configuration class that are useful

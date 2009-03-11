@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'simple_metrics/version'
+require 'simplemetrics/version'
 require 'tasks/config'
 
 SimpleMetrics::GEM_SPEC = Gem::Specification.new do |spec|
