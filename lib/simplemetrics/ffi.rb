@@ -19,7 +19,7 @@ module SimpleMetrics
     end
 
     extend ::FFI::Library
-    ffi_lib "ext/simple_metrics_ext.#{Config::CONFIG['DLEXT']}"
+    ffi_lib "libsimple_metrics"
 
     attach_function :simple_metrics_new,   [          ], :pointer
     attach_function :simple_metrics_free,  [ :pointer ], :void

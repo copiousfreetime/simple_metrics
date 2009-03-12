@@ -3,4 +3,6 @@
 *.bundle
 ext/demo
 ext/Makefile
+ext/mkmf.log
+ext/conf*
 coverage/

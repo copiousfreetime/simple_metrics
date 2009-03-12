@@ -1,6 +1,6 @@
 module SimpleMetrics
   begin
-    require 'simple_metrics_ext'
+    require 'libsimple_metrics'
     Metric = ::SimpleMetrics::Ext::Metric
   rescue LoadError => le
     require 'simplemetrics/ffi'
