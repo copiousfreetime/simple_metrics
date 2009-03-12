@@ -17,14 +17,22 @@ iterations.times do |x|
   numbers << rand( 10_000 )
 end
 
-require 'simple_metrics_ext'
-require 'simplemetrics/ffi'
+require 'simplemetrics/metric'
 
-metrics = [
- SimpleMetrics::FFI::Metric.new( "ffi" ), 
- SimpleMetrics::Ext::Metric.new( "ext" )
-]
+metrics = []
+begin
+  require 'simple_metrics_ext'
+  metrics << SimpleMetrics::Ext::Metric.new( "ext" )
+rescue LoadError => le
+  puts "Skipping Ext"
+end
 
+begin 
+  require 'simplemetrics/ffi'
+  metrics << ::SimpleMetrics::FFI::Metric.new( "ffi" )
+rescue LoadError => le
+  puts "Skipping FFI"
+end
 
 bmbm( 12 ) do |x|
   metrics.each do |m|
